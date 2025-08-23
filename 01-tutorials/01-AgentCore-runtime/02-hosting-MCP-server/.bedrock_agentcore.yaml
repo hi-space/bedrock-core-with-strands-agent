@@ -1,0 +1,34 @@
+default_agent: mcp_server_ac
+agents:
+  mcp_server_ac:
+    name: mcp_server_ac
+    entrypoint: /Users/yooleej/workspace/amazon-bedrock-agentcore-samples/01-tutorials/01-AgentCore-runtime/02-hosting-MCP-server/mcp_server.py
+    platform: linux/arm64
+    container_runtime: docker
+    aws:
+      execution_role: arn:aws:iam::913524902871:role/agentcore-mcp_server_ac-role
+      execution_role_auto_create: false
+      account: '913524902871'
+      region: us-west-2
+      ecr_repository: 913524902871.dkr.ecr.us-west-2.amazonaws.com/bedrock-agentcore-mcp_server_ac
+      ecr_auto_create: false
+      network_configuration:
+        network_mode: PUBLIC
+      protocol_configuration:
+        server_protocol: MCP
+      observability:
+        enabled: true
+    bedrock_agentcore:
+      agent_id: mcp_server_ac-Ln85Fd3WJt
+      agent_arn: arn:aws:bedrock-agentcore:us-west-2:913524902871:runtime/mcp_server_ac-Ln85Fd3WJt
+      agent_session_id: null
+    codebuild:
+      project_name: null
+      execution_role: null
+      source_bucket: null
+    authorizer_configuration:
+      customJWTAuthorizer:
+        allowedClients:
+        - 6ud752ifof4t6dg48orh4elvea
+        discoveryUrl: https://cognito-idp.us-west-2.amazonaws.com/us-west-2_dmsOAH8Sw/.well-known/openid-configuration
+    oauth_configuration: null
