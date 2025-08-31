@@ -1,5 +1,7 @@
 # 📚 Amazon Bedrock AgentCore 튜토리얼
 
+> 본 레포는 워크샵용으로 [awslabs/amazon-bedrock-agentcore-samples](https://github.com/awslabs/amazon-bedrock-agentcore-samples)를 복사하여 일부 한글 번역했습니다.
+
 Amazon Bedrock AgentCore 샘플 저장소의 튜토리얼 섹션에 오신 것을 환영합니다!
 
 이 폴더에는 실습 예제를 통해 Amazon Bedrock AgentCore의 기본 기능을 학습할 수 있도록 설계된 대화형 노트북 기반 튜토리얼이 포함되어 있습니다.
